@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <ctype.h>
+int main()
+{
+	char c;
+	
+	printf("Geef een teken: ");
+	c = getchar();
+	if (islower(c)) {
+		printf("%c is %d", c, c);
+		}
+	else if (isupper(c)){
+		printf("%c is %#x", c, c);
+		}
+	else {
+		printf("%c", c);
+		};
+	
+	return 0;
+}
