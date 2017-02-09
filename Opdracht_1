@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c;
+	printf ("Eerste cijfer: ");
+	scanf ("%d", &a);
+	printf ("Tweede cijfer: ");
+	scanf ("%d", &b);
+	if (a && b != 0) {
+		c = a + b;
+		printf ("%d + %d = %d",a,b,c);
+	}
+	else {
+	printf("ERROR");
+	}
+	return 0;
+}
