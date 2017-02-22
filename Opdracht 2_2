@@ -1,0 +1,23 @@
+#include <stdio.h> 
+#include <string.h>
+
+int main()
+{
+	char t1[101] = {};
+	char t2[101] = {};
+	
+	printf("Tekst 1: ");
+	fgets(t1,100,stdin);
+	
+	printf("Tekst 2: ");
+	fgets(t2,100,stdin);
+	
+	for(int i = 0; i < 101; i++) {
+        if (t1[i] != t2[i]) {
+			printf("het verschil in de tekst begint bij index %d", i);
+			i = 101;
+		}
+		else {}
+	}
+	return 0;
+}
