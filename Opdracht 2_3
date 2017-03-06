@@ -13,3 +13,24 @@ int main(int argc, char **argv)
 
 	return 0;
 }
+
+// pointer
+
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+	char string[81] = {};
+	printf("Geef string: ");
+	fgets(string,80,stdin);
+	
+	char *p = string + strlen(string);
+	
+	for (int i=strlen(string); i>=0; i--) {
+		printf("%c", *p);
+		p--;
+		
+	}
+	return 0;
+}
