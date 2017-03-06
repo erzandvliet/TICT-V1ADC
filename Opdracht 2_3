@@ -31,12 +31,19 @@ int main(int argc, char **argv)
 	printf("Geef string: ");
 	fgets(string,80,stdin);
 	
-	char *p = string + strlen(string);
+	char *p; 
+	p = string + strlen(string) - 2;
+	char *a; 
+	a = string;
+	char j;
 	
-	for (int i=strlen(string); i>=0; i--) {
-		printf("%c", *p);
+	for (int i = 0; i<strlen(string)/2; i++) {
+		j = *p;
+		*p = *a;
+		*a = j;
+		a++;
 		p--;
-		
 	}
+	printf("%s", string);
 	return 0;
 }
