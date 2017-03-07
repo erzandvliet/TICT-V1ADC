@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct voorwerp
+{
+	int nummer;
+	char naam[20];
+	double gewicht, lengte;
+} VOORWERP;
+
+int main(int argc, char **argv)
+{
+	struct voorwerp VOORWERP;
+	printf("nummer: ");
+	scanf("%d%*c", &VOORWERP.nummer);
+	printf("naam: ");
+	fgets(VOORWERP.naam,20,stdin);
+	printf("gewicht: ");
+	scanf("%lf", &VOORWERP.gewicht);
+	printf("lengte: ");
+	scanf("%lf", &VOORWERP.lengte);
+	
+	printf("\n");
+	printf("nummer: %d\nnaam: %s\ngewicht: %lf\nlengte: %lf", VOORWERP.nummer, VOORWERP.naam, VOORWERP.gewicht, VOORWERP.lengte);
+	return 0;
+}
